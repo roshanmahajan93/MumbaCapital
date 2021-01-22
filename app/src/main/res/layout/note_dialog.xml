@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/DP_16"
+    android:paddingRight="@dimen/DP_16"
+    android:paddingTop="@dimen/DP_16">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:id="@+id/title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/DP_10"
+        android:fontFamily="sans-serif-medium"
+        android:lineSpacingExtra="8sp"
+        android:text="New Document"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/note_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:hint="Document Name"
+        android:textColor="#5e5d5d"
+        android:textColorHint="#5e5d5d"
+        android:inputType="textCapSentences|textMultiLine"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/imageLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DP_350"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_marginTop="@dimen/DP_20">
+
+        <RelativeLayout
+            android:id="@+id/relative1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="8">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/img_cust_img"
+                android:layout_width="@dimen/DP_300"
+                android:layout_height="@dimen/DP_300"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                />
+
+            <ImageView
+                android:id="@+id/img_cust_img2"
+                android:layout_width="@dimen/DP_300"
+                android:layout_height="@dimen/DP_300"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:layout_gravity="center" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2">
+
+            <Button
+                android:id="@+id/btn_camera"
+                android:layout_width="@dimen/DP_35"
+                android:layout_height="@dimen/DP_35"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/DP_10"
+                android:gravity="center_vertical"
+                android:background="@drawable/camera_icon" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
